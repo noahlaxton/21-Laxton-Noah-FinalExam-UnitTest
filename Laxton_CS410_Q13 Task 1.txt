@@ -1,0 +1,33 @@
+Noah Laxton
+June 23, 2012
+
+Task 1: Write a text document to list the recommended ordered steps you need to apply to complete the tasks of:
+
+Extending the add method for StringCalculator class to cover the new requirements above
+Write an entire Test class that focuses only on testing the new requirements (Extended Functionalities)
+
+Step 1: setup a Project with Junit
+
+Step 2: Decide on the test cases
+Calling Add with a negative number will throw an exception “negatives not allowed.” 
+Numbers bigger than 1000 should be ignored.
+
+Check for any assert exception, etc.
+
+Step 3: Write Test cases
+ public void negativeNumberTest();
+	public void over100Test
+Step 4: Write code 
+public class StringCalculator {
+   public static int add(final String numbers) {
+      int returnValue = 0;
+      String[] numbersArray = numbers.split(",|\n"); 
+      for (String number : numbersArray) {
+         if (!number.trim().isEmpty()) {
+            returnValue += Integer.parseInt(number.trim());
+         }
+      }
+      return returnValue;
+   }
+}
+Step 5: repeat if necessary 
